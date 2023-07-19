@@ -16,9 +16,7 @@ void print_array(int *array, int size)
 		if (i == 0)
 			printf("%d", array[i]);
 		else
-			printf("%09d", array[i]);
-		if (i != size - 1)
-			printf(", ");
+			printf(", %d", array[i]);
 	}
 	printf("\n");
 }
@@ -29,14 +27,14 @@ void print_array(int *array, int size)
 void fibonacci(void)
 {
 	int fib[FIBONACCI_LENGTH] = {0};
-	int i, carry, temp;
+	int i, carry, temp, j;
 
 	fib[FIBONACCI_LENGTH - 1] = 1;
 
 	for (i = 2; i <= FIBONACCI_LENGTH; i++)
 	{
 		carry = 0;
-		for (int j = FIBONACCI_LENGTH - 1; j >= 0; j--)
+		for (j = FIBONACCI_LENGTH - 1; j >= 0; j--)
 		{
 			temp = fib[j] * i + carry;
 			carry = temp / 1000000000;

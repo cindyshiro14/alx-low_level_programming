@@ -25,4 +25,7 @@ void more_numbers(void);
 /* Function prototype for print_line function */
 void print_line(int n);
 
+/* Function prototype for print_diagonal function */
+void print_diagonal(int n);
+
 #endif /* MAIN_H */

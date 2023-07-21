@@ -22,4 +22,7 @@ void print_most_numbers(void);
 /* Function prototype for more_numbers function */
 void more_numbers(void);
 
+/* Function prototype for print_line function */
+void print_line(int n);
+
 #endif /* MAIN_H */

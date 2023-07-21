@@ -13,4 +13,7 @@ int _putchar(char c);
 /* Function prototype for mul function */
 int mul(int a, int b);
 
+/* Function prototype for print_numbers function */
+void print_numbers(void);
+
 #endif /* MAIN_H */

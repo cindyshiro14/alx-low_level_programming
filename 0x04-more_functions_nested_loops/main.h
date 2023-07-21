@@ -37,4 +37,7 @@ void fizz_buzz(void);
 /* print_triangle - Prints a triangle with the character '#' */
 void print_triangle(int size);
 
+/* largest_prime_factor - Finds the largest prime factor of a number */
+long largest_prime_factor(long n);
+
 #endif /* MAIN_H */

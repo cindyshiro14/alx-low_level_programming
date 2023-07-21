@@ -31,4 +31,7 @@ void print_diagonal(int n);
 /* Function prototype for print_square function */
 void print_square(int size);
 
+/* Fizz-Buzz - Prints numbers from 1 to 100 with Fizz-Buzz replacements */
+void fizz_buzz(void);
+
 #endif /* MAIN_H */

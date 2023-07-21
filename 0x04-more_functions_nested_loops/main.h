@@ -34,4 +34,7 @@ void print_square(int size);
 /* Fizz-Buzz - Prints numbers from 1 to 100 with Fizz-Buzz replacements */
 void fizz_buzz(void);
 
+/* print_triangle - Prints a triangle with the character '#' */
+void print_triangle(int size);
+
 #endif /* MAIN_H */

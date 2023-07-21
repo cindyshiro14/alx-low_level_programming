@@ -8,16 +8,15 @@
  */
 long largest_prime_factor(long n)
 {
-	long i;
+	long largest_factor = 2;
 
-	for (i = 2; i <= n; i++)
+	while (n > largest_factor)
 	{
-		if (n % i == 0)
-		{
-			n /= i;
-			i--;
-		}
+		if (n % largest_factor == 0)
+			n /= largest_factor;
+		else
+			largest_factor++;
 	}
 
-	return (i);
+	return (largest_factor);
 }

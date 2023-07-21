@@ -10,4 +10,7 @@ int _isdigit(int c);
 /* Function prototype for _putchar function */
 int _putchar(char c);
 
+/* Function prototype for mul function */
+int mul(int a, int b);
+
 #endif /* MAIN_H */

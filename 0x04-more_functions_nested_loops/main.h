@@ -19,4 +19,7 @@ void print_numbers(void);
 /* Function prototype for print_most_numbers function */
 void print_most_numbers(void);
 
+/* Function prototype for more_numbers function */
+void more_numbers(void);
+
 #endif /* MAIN_H */

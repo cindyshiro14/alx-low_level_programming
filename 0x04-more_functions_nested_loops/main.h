@@ -40,4 +40,7 @@ void print_triangle(int size);
 /* largest_prime_factor - Finds the largest prime factor of a number */
 long largest_prime_factor(long n);
 
+/* print_number - Prints an integer */
+void print_number(int n);
+
 #endif /* MAIN_H */

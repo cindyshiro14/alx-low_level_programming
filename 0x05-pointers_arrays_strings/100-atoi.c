@@ -11,6 +11,7 @@ int _atoi(char *s)
 	int i = 0;
 	int sign = 1;
 	int result = 0;
+	int digit;
 
 	/* Handle sign */
 	while (s[i] == '-' || s[i] == '+')
@@ -23,8 +24,10 @@ int _atoi(char *s)
 	/* Convert string to integer */
 	while (s[i] >= '0' && s[i] <= '9')
 	{
-		/* Handle overflow */
-		if (result > (INT_MAX - (s[i] - '0')) / 10)
+		digit = s[i] - '0';
+
+		/* Check for overflow */
+		if (result > INT_MAX / 10 || (result == INT_MAX / 10 && digit > INT_MAX % 10))
 		{
 			if (sign == 1)
 				return (INT_MAX);
@@ -32,7 +35,7 @@ int _atoi(char *s)
 				return (INT_MIN);
 		}
 
-		result = result * 10 + (s[i] - '0');
+		result = result * 10 + digit;
 		i++;
 	}
 

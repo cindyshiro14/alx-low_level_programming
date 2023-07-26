@@ -1,15 +1,14 @@
-#include <stdio.h>
+#include "main.h"
 
-int main(void)
+/**
+ * magic - Prints a[2] = 98 followed by a new line.
+ */
+void magic(void)
 {
-int a[5] = {0, 1, 2, 3, 4};
-int *p = a;
+int *p;
+int a[] = {0, 1, 2, 3, 4};
 
-printf("Before - a[2] = %d\n", a[2]);
-/* Add one line here */
-*(p + 5) = 98;
-/* End of the added line */
-
-printf("After  - a[2] = %d\n", a[2]);
-return (0);
+p = a;
+p += 2;
+*p = 98;
 }

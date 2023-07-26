@@ -13,5 +13,6 @@ int _putchar(char c);
 char *rot13(char *str);
 void print_number(int n);
 void magic(void);
+void reverse_string(char *str)
 
 #endif /* MAIN_H */

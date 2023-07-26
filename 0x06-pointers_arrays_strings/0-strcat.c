@@ -15,7 +15,7 @@ while (*dest)
 dest++;
 
 while (*src)
-{ 
+{
 *dest = *src;
 dest++;
 src++;

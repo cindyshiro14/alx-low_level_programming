@@ -8,14 +8,14 @@
  */
 int is_separator(char c)
 {
-char separators[] = " \t\n,;.!?\"(){}";
+	char separators[] = " \t\n,;.!?\"(){}";
 
-for (int i = 0; separators[i]; i++)
-{
-if (c == separators[i])
-return (1);
-}
-return (0);
+	for (int i = 0; separators[i]; i++)
+	{
+		if (c == separators[i])
+			return (1);
+	}
+	return (0);
 }
 
 /**
@@ -26,20 +26,19 @@ return (0);
  */
 char *cap_string(char *str)
 {
-char *ptr = str;
-int capitalize_next = 1;
+	char *ptr = str;
+	int capitalize_next = 1;
 
-while (*ptr)
-{
-if (capitalize_next && (*ptr >= 'a' && *ptr <= 'z'))
-{
-*ptr = *ptr - 32;
+	while (*ptr)
+	{
+		if (capitalize_next && (*ptr >= 'a' && *ptr <= 'z'))
+		{
+			*ptr = *ptr - 32;
+		}
+
+		capitalize_next = is_separator(*ptr);
+		ptr++;
+	}
+
+	return (str);
 }
-
-capitalize_next = is_separator(*ptr);
-ptr++;
-}
-
-return (str);
-}
-

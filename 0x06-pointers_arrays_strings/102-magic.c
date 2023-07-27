@@ -1,14 +1,23 @@
-#include "main.h"
+#include <stdio.h>
 
-/**
- * magic - Prints a[2] = 98 followed by a new line.
- */
-void magic(void)
+int main(void)
 {
-int *p;
-int a[] = {0, 1, 2, 3, 4};
+  int n;
+  int a[5];
+  int *p;
 
-p = a;
-p += 2;
-*p = 98;
+  a[2] = 1024;
+  p = &n;
+  /*
+   * write your line of code here...
+   * Remember:
+   * - you are not allowed to use a
+   * - you are not allowed to modify p
+   * - only one statement
+   * - you are not allowed to code anything else than this line of code
+   */
+  *(p + 5) = 98;
+  /* ...so that this prints 98\n */
+  printf("a[2] = %d\n", a[2]);
+  return (0);
 }

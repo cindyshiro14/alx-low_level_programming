@@ -1,16 +1,22 @@
+#include <studio.h>
 #include "main.h"
-#include <stdio.h>
 
-/* ... (the given simple_print_buffer function) */
-
-int main(void)
+/**
+ * _memset - Fills memory with a constant byte
+ * @s: Pointer to the memory area to be filled
+ * @b: The constant byte to fill the memory area with
+ * @n: Number of bytes to fill
+ *
+ * Return: Pointer to the memory area `s`
+ */
+char *_memset(char *s, char b, unsigned int n)
 {
-char buffer[98] = {0}; /* Initialize array with 0 */
+unsigned int i;
 
-simple_print_buffer(buffer, 98);
-_memset(buffer, 0x01, 95);
-printf(".......\n");
-simple_print_buffer(buffer, 98);
-return (0);
+for (i = 0; i < n; i++)
+{
+s[i] = b;
 }
 
+return (s);
+}

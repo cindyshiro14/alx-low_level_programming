@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -22,16 +23,23 @@ void print_diagsums(int *a, int size)
 		}
 	}
 
-	_putchar(sum1 / 1000 + '0');
-	_putchar(sum1 / 100 % 10 + '0');
-	_putchar(sum1 / 10 % 10 + '0');
+	/* Print sum1 */
+	if (sum1 >= 1000)
+		_putchar(sum1 / 1000 + '0');
+	if (sum1 >= 100)
+		_putchar(sum1 / 100 % 10 + '0');
+	if (sum1 >= 10)
+		_putchar(sum1 / 10 % 10 + '0');
 	_putchar(sum1 % 10 + '0');
 	_putchar(',');
-	_putchar(' ');
 
-	_putchar(sum2 / 1000 + '0');
-	_putchar(sum2 / 100 % 10 + '0');
-	_putchar(sum2 / 10 % 10 + '0');
+	/* Print sum2 */
+	if (sum2 >= 1000)
+		_putchar(sum2 / 1000 + '0');
+	if (sum2 >= 100)
+		_putchar(sum2 / 100 % 10 + '0');
+	if (sum2 >= 10)
+		_putchar(sum2 / 10 % 10 + '0');
 	_putchar(sum2 % 10 + '0');
 	_putchar('\n');
 }

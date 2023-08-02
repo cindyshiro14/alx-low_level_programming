@@ -10,5 +10,6 @@ int _pow_recursion(int x, int y);
 int find_sqrt(int n, int guess);
 int is_prime_helper(int n, int i);
 int is_palindrome_helper(char *s, int start, int end);
+int wildcmp(char *s1, char *s2);
 
 #endif /* MAIN_H */

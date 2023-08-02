@@ -8,5 +8,6 @@ int _strlen_recursion(char *s);
 int factorial(int n);
 int _pow_recursion(int x, int y);
 int find_sqrt(int n, int guess);
+int is_prime_helper(int n, int i);
 
 #endif /* MAIN_H */

@@ -1,8 +1,8 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
- * main - Entry point of the program.
+ * main - Entry point of the program for Task 2.
  * @argc: The number of command-line arguments.
  * @argv: An array of pointers to the command-line arguments.
  *
@@ -12,7 +12,13 @@ int main(int argc, char *argv[])
 {
 for (int i = 0; i < argc; i++)
 {
-printf("%s\n", argv[i]);
+int j = 0;
+while (argv[i][j] != '\0')
+{
+_putchar(argv[i][j]);
+j++;
+}
+_putchar('\n');
 }
 
 return (0);

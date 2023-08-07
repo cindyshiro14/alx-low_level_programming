@@ -10,19 +10,19 @@
  */
 int count_words(char *str)
 {
-    int i, words = 0;
+	int i, words = 0;
 
-    for (i = 0; str[i]; i++)
-    {
-        if (str[i] != ' ')
-        {
-            words++;
-            while (str[i] && str[i] != ' ')
-                i++;
-        }
-    }
+	for (i = 0; str[i]; i++)
+	{
+		if (str[i] != ' ')
+		{
+			words++;
+			while (str[i] && str[i] != ' ')
+				i++;
+		}
+	}
 
-    return words;
+	return (words);
 }
 
 /**
@@ -33,47 +33,47 @@ int count_words(char *str)
  */
 char **strtow(char *str)
 {
-    char **words;
-    int i, j, k, word_count;
+	char **words;
+	int i, j, k, word_count;
 
-    if (str == NULL || str[0] == '\0')
-        return NULL;
+	if (str == NULL || str[0] == '\0')
+		return (NULL);
 
-    word_count = count_words(str);
-    if (word_count == 0)
-        return NULL;
+	word_count = count_words(str);
+	if (word_count == 0)
+		return (NULL);
 
-    words = malloc((word_count + 1) * sizeof(char *));
-    if (words == NULL)
-        return NULL;
+	words = malloc((word_count + 1) * sizeof(char *));
+	if (words == NULL)
+		return (NULL);
 
-    i = 0;
-    j = 0;
-    while (str[i])
-    {
-        while (str[i] == ' ')
-            i++;
+	i = 0;
+	j = 0;
+	while (str[i])
+	{
+		while (str[i] == ' ')
+			i++;
 
-        k = 0;
-        while (str[i + k] && str[i + k] != ' ')
-            k++;
+		k = 0;
+		while (str[i + k] && str[i + k] != ' ')
+			k++;
 
-        words[j] = malloc((k + 1) * sizeof(char));
-        if (words[j] == NULL)
-        {
-            for (k = 0; k < j; k++)
-                free(words[k]);
-            free(words);
-            return NULL;
-        }
+		words[j] = malloc((k + 1) * sizeof(char));
+		if (words[j] == NULL)
+		{
+			for (k = 0; k < j; k++)
+				free(words[k]);
+			free(words);
+			return (NULL);
+		}
 
-        for (k = 0; str[i] && str[i] != ' '; i++, k++)
-            words[j][k] = str[i];
+		for (k = 0; str[i] && str[i] != ' '; i++, k++)
+			words[j][k] = str[i];
 
-        words[j][k] = '\0';
-        j++;
-    }
-    words[j] = NULL;
+		words[j][k] = '\0';
+		j++;
+	}
+	words[j] = NULL;
 
-    return words;
+	return (words);
 }

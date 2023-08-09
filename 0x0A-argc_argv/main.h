@@ -4,10 +4,5 @@
 #include <stdio.h>
 
 int _putchar(char c);
-int main(int argc, char *argv[]);
-int main_1(int argc, char *argv[]);
-int main_2(int argc, char *argv[]);
-int count_coins(int cents);
-bool is_positive_number(const char *str);
 
 #endif /* MAIN_H */

@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - Entry point
+ * @argc: The number of command-line arguments
+ * @argv: An array of pointers to the arguments
+ *
+ * Return: 0 if successful, 1 if an error occurred
+ */
 int main(int argc, char *argv[])
 {
 int cents, coins = 0;
@@ -45,8 +52,6 @@ while (cents >= 1)
 cents -= 1;
 coins++;
 }
-
 printf("%d\n", coins);
-
 return (0);
 }

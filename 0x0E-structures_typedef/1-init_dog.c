@@ -1,23 +1,18 @@
-#include "dog.h"
-#include <string.h>
 #include <stdio.h>
-#include "main.h"
+#include "dog.h"
 
 /**
- * init_dog - Initialize a struct dog.
- * @d: Pointer to the struct dog.
- * @name: Name of the dog.
- * @age: Age of the dog.
- * @owner: Owner of the dog.
+ * main - check the code
  *
- * Return: None.
+ * Return: Always 0.
  */
-void init_dog(struct dog *d, char *name, float age, char *owner)
+int main(void)
 {
-if (d != NULL)
-{
-strcpy(d->name, name);
-d->age = age;
-strcpy(d->owner, owner);
-}
+struct dog my_dog;
+
+my_dog.name = "Poppy";
+my_dog.age = 3.5;
+my_dog.owner = "Bob";
+printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
+return (0);
 }

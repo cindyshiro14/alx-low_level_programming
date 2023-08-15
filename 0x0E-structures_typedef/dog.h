@@ -14,4 +14,7 @@ float age;
 char *owner;
 };
 
+/* Define dog_t as an alias for struct dog */
+typedef struct dog dog_t;
+
 #endif /* DOG_H */

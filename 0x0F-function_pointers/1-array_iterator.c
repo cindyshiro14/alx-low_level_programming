@@ -12,9 +12,11 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
     if (array != NULL && action != NULL)
     {
-        for (size_t i = 0; i < size; i++)
+        int *end = array + size; // Pointer to the end of the array
+
+        for (; array < end; array++)
         {
-            action(array[i]);
+            action(*array);
         }
     }
 }

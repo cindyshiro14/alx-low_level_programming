@@ -4,6 +4,6 @@
 #include <stdarg.h>
 
 int sum_them_all(const unsigned int n, ...);
-int _putchar(char c); // Include _putchar prototype
+int _putchar(char c); /* Include _putchar prototype */
 
 #endif /* VARIADIC_FUNCTIONS_H */

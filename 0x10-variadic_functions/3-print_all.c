@@ -9,38 +9,40 @@
  */
 void print_all(const char * const format, ...)
 {
-va_list args;
-unsigned int i = 0;
-char *separator = "";
+    va_list args;
+    unsigned int i = 0;
+    char *separator = "";
 
-va_start(args, format);
+    va_start(args, format);
 
-while (format != NULL && format[i] != '\0')
-{
-switch (format[i])
-{
-case 'c':
-printf("%s%c", separator, va_arg(args, int));
-break;
-case 'i':
-printf("%s%d", separator, va_arg(args, int));
-break;
-case 'f':
-printf("%s%f", separator, va_arg(args, double));
-break;
-case 's':
-separator = ", ";
-char *str = va_arg(args, char *);
-if (str == NULL)
-str = "(nil)";
-printf("%s%s", separator, str);
-break;
-default:
-break;
-}
-i++;
-}
+    while (format != NULL && format[i] != '\0')
+    {
+        char *str; // Declare the variable at the beginning of the block
 
-printf("\n");
-va_end(args);
+        switch (format[i])
+        {
+            case 'c':
+                printf("%s%c", separator, va_arg(args, int));
+                break;
+            case 'i':
+                printf("%s%d", separator, va_arg(args, int));
+                break;
+            case 'f':
+                printf("%s%f", separator, va_arg(args, double));
+                break;
+            case 's':
+                separator = ", ";
+                str = va_arg(args, char *); // Assign value here
+                if (str == NULL)
+                    str = "(nil)";
+                printf("%s%s", separator, str);
+                break;
+            default:
+                break;
+        }
+        i++;
+    }
+
+    printf("\n");
+    va_end(args);
 }

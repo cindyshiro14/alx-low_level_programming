@@ -2,23 +2,17 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 
-/**
- * print_all - Prints anything based on the format provided.
- * @format: List of types of arguments passed to the function.
- * @...: The variable number of arguments to be printed.
- */
 void print_all(const char * const format, ...)
 {
     va_list args;
     unsigned int i = 0;
     char *separator = "";
+    char *str;
 
     va_start(args, format);
 
     while (format != NULL && format[i] != '\0')
     {
-        char *str; // Declare the variable at the beginning of the block
-
         switch (format[i])
         {
             case 'c':
@@ -32,7 +26,7 @@ void print_all(const char * const format, ...)
                 break;
             case 's':
                 separator = ", ";
-                str = va_arg(args, char *); // Assign value here
+                str = va_arg(args, char *);
                 if (str == NULL)
                     str = "(nil)";
                 printf("%s%s", separator, str);

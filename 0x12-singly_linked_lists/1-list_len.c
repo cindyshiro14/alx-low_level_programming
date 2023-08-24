@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * list_len - This fnctn returns the number of elements in a linked list_t list.
+ * list_len -Fnctn returns the number of elements in a linked list_t list.
  * @h: Pointer to the head of the linked list.
  *
  * Return: Number of elements in linked list.

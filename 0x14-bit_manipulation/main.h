@@ -22,4 +22,7 @@ int set_bit(unsigned long int *n, unsigned int index);
 /* Function prototype for clearing the value of a bit at a given index */
 int clear_bit(unsigned long int *n, unsigned int index);
 
+/* Function prototype for counting the number of bits needed to flip */
+unsigned int flip_bits(unsigned long int n, unsigned long int m);
+
 #endif /* MAIN_H */

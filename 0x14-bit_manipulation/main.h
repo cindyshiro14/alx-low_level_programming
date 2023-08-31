@@ -1,8 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stddef.h> // For NULL definition
-#include <unistd.h> // For the write function
+#include <stddef.h> 
+#include <unistd.h> //
 
 /* Function prototype for printing characters */
 int _putchar(char c);

@@ -16,4 +16,7 @@ void print_binary(unsigned long int n);
 /* Function prototype for getting the value of a bit at a given index */
 int get_bit(unsigned long int n, unsigned int index);
 
+/* Function prototype for setting the value of a bit at a given index */
+int set_bit(unsigned long int *n, unsigned int index);
+
 #endif /* MAIN_H */

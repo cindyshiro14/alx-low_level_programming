@@ -19,4 +19,7 @@ int get_bit(unsigned long int n, unsigned int index);
 /* Function prototype for setting the value of a bit at a given index */
 int set_bit(unsigned long int *n, unsigned int index);
 
+/* Function prototype for clearing the value of a bit at a given index */
+int clear_bit(unsigned long int *n, unsigned int index);
+
 #endif /* MAIN_H */

@@ -4,6 +4,13 @@
 #include <unistd.h>
 #include "main.h"
 
+/**
+ * read_textfile - Read and print the contents of a text file to stdout.
+ * @filename: The name of the file to read.
+ * @letters: The number of letters to read and print.
+ *
+ * Return: The actual number of letters read and printed, or -1 on failure.
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 int fd;
